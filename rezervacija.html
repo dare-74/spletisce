@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervacija | Barber Salon Krann</title>
+    <link rel="stylesheet" href="style.css"> <!-- povezava na CSS datoteko -->
+</head>
+<body>
+    <header>
+        <h1>Barber Salon Krann</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="onas.html">O nas</a></li>
+                <li class="dropdown">
+                    <a href="storitve.html">Storitve &#9662;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="mosko-strizenje.html">Moško striženje</a></li>
+                        <li><a href="nega-brade.html">Nega brade</a></li>
+                    </ul>
+                </li>
+                <li><a href="cenik.html">Cenik</a></li>
+                <li><a href="galerija.html">Galerija</a></li>
+                <li><a href="rezervacija.html">Rezervacija</a></li>
+                <li><a href="lokacija.html">Lokacija</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="pregled.html">Pregled</a></li>
+            </ul>
+        </nav>        
+    </header>
+
+    <main>
+        <h2>Rezerviraj svoj termin</h2>
+
+        <!-- Obrazec za rezervacijo -->
+        <form id="reservationForm" class="reservation-form">
+            <div class="form-group">
+                <label for="name">Ime in priimek:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="service">Izberite storitev:</label>
+                <select id="service" name="service" required>
+                    <option value="mosko-strizenje">Moško striženje</option>
+                    <option value="fade-strizenje">Fade striženje</option>
+                    <option value="brada-britje">Brada + britje</option>
+                    <option value="komplet">Komplet (lase + brada)</option>
+                    <option value="strizenje-otrok">Striženje otrok</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Datum:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Čas:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            <button type="submit" class="submit-btn">Rezerviraj termin</button>
+        </form>
+
+        <!-- Prikaz obvestila po uspešni rezervaciji -->
+        <div id="confirmationMessage" class="confirmation-message" style="display:none;">
+            <p>Uspešno ste rezervirali termin! Hvala, da ste izbrali Barber Salon Krann.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Barber Salon Krann</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Povezava na JavaScript datoteko -->
+</body>
+</html>
